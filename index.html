@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KiteChat</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="uiverse.css">
+  <link rel="shortcut icon" href="assets/rand 3d.png" type="image/x-icon">
 </head>
 <body>
   <nav class="navbar">
@@ -20,14 +22,37 @@
     </label>
 
     <ul class="nav-links">
-      <li><a href="#">Criar Post</a></li>
-      <li><a id="status" href="#">Online *</a></li>
+      <li><button class="btn"><a href="create.html">+</a></button></li>
+      <li><button class="btn"><a id="configurations" href="config.html"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bolt-icon lucide-bolt"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><circle cx="12" cy="12" r="4"/></svg></a></button></li>
       <li>
-        <a id="MyProfile" href="#">
+        <a id="MyProfile" href="profile">
           <img id="pfp" src="assets/dexter pfp.jpg" alt="Profile" />
         </a>
       </li>
     </ul>
   </nav>
+
+  <main>
+
+    <section id="posts">
+      <div class="post">
+        <h1>Post Title</h1>
+        <h3>Post Content Prev</h3>
+      </div>
+
+    </section>
+    <section class="status">
+      <p>Level: <span>0xp</span></p>
+      <p>Membros: <span>4000</span></p>
+      <p>Membros Online: <span>3293</span> </p>
+
+      
+    </section>
+
+    <section class="">
+
+    </section>
+  </main>
+
 </body>
 </html>

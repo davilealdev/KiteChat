@@ -6,6 +6,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -14,7 +15,7 @@ body {
   width: 100vw;
   height: 10vh;
   background-color: #0c0c0c;
-  border-bottom: 4px solid #ffd449;
+  border-bottom: 8px solid #ffd449;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,12 +32,13 @@ body {
 }
 
 #kiteIcon {
-  width: clamp(350px, 32vw, 200px);
+  width: clamp(400px, 32vw, 200px);
   border-radius: 50%;
-  border: 3px solid #ffd449;
-  background-image: linear-gradient(to bottom right, #0c0c0c, #ffd449);
+  border: 6px solid #ffd449;
+  background-image: linear-gradient(to bottom right, #0c0c0c,#1a4908, #28670a);
   object-fit: cover;
-  margin-top: 290px;
+  margin-top: 400px;
+  margin-left: 60px;
 }
 
 /* LINKS */
@@ -56,11 +58,12 @@ body {
   font-size: clamp(16px, 2.2vw, 28px);
   text-decoration: none;
   font-weight: 600;
+  font-size: 40px;
 }
 
 #pfp {
-  width: 55px;
-  height: 55px;
+  width: 75px;
+  
   border-radius: 50%;
   border: 2px solid #ffd449;
   padding: 3px;
@@ -129,4 +132,9 @@ body {
   #menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translateY(-9px);
   }
+}
+
+main{
+  columns: 2;
+
 }
