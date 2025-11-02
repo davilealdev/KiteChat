@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+
 /* Cores base */
 body {
   background-color: #0c0c0c;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  
+  overflow: hidden;
+
+   font-family: "Momo Trust Display", sans-serif;
+
 }
 
 
 /* NAVBAR */
 .navbar {
-  position: fixed;
+
   top: 0;
   left: 0;
   width: 100vw;
@@ -20,6 +26,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  margin: 0px;
 
 }
 
@@ -48,9 +55,9 @@ body {
   align-items: center;
   gap: 1.3rem;
   margin: 0;
-  padding: 0;
+  
   transition: 0.3s ease;
-  padding: 10px 30px 10px 10px;
+  padding: 15px 30px 10px 10px;
 }
 
 .nav-links li a {
@@ -62,7 +69,7 @@ body {
 }
 
 #pfp {
-  width: 75px;
+  width: 65px;
   
   border-radius: 50%;
   border: 2px solid #ffd449;
@@ -135,6 +142,194 @@ body {
 }
 
 main{
-  columns: 2;
+  background-image: linear-gradient(to bottom, #0c0c0c, #113d03);
+  height: 100vh;
+  
+  
+}
 
+.posts{
+  /* background-color: #3b7e0f; */
+  margin: auto;
+  width: 700px;
+  height: 100vh;
+  padding: 30px;
+  overflow-y: scroll;
+}
+
+.posts::-webkit-scrollbar{
+  color: #0c0c0c;
+}
+
+.status {
+  position: absolute;
+  top: 18vh; /* logo abaixo da navbar */
+  right: 40px;
+  width: 260px;
+  padding: 20px;
+
+  background: #ffd449;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(255, 212, 73, 0.25),
+              inset 0 0 12px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.2rem;
+  color: #113d03;
+  font-weight: 600;
+  border: 4px solid #113d03;
+
+  animation: fadeIn 0.4s ease;
+}
+
+.status p {
+  margin: 0;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(17, 61, 3, 0.4);
+}
+
+.status p:last-child {
+  border-bottom: none;
+}
+
+.status span {
+  font-weight: 900;
+  color: #28670a;
+  text-shadow: 0 0 6px rgba(17, 61, 3, 0.45);
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#post {
+  background-color: #1a4908; /* verde escuro pra contraste */
+  color: #ffd449;
+  border-radius: 18px;
+  margin: 15px 0;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4),
+              inset 0 0 10px rgba(255, 212, 73, 0.1);
+  border: 2px solid rgba(255, 212, 73, 0.3);
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+}
+
+/* título e preview */
+
+#postInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+#postInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ffd449;
+}
+
+#postInfo span {
+  font-weight: bold;
+  color: #ffd449;
+}
+#post h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffd449;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 212, 73, 0.4);
+}
+
+#post h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffd449;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 212, 73, 0.4);
+}
+
+/* efeito ao passar o mouse */
+#post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(255, 212, 73, 0.3),
+              inset 0 0 20px rgba(255, 212, 73, 0.15);
+  border-color: #ffd449;
+}
+
+/* animação sutil ao clicar */
+#post:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(255, 212, 73, 0.2);
+}
+
+hr{
+  color: #ffd449;
+}
+
+/* === Ranking Limpo === */
+.ranking {
+  margin-top: 15px;
+}
+
+.ranking h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #64560b; /* dourado suave */
+  text-align: center;
+}
+
+.ranking ol {
+  list-style-type: decimal;
+  padding: 0;
+  margin: 0;
+}
+
+.rankUser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff8d6; /* combina com o status amarelo */
+  color: #2a2a2a;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.rankUser img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #e6c400;
+}
+
+.rankUser span {
+  background: #e6c400;
+  color: #2a2a2a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
 }
